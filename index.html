@@ -5,267 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deepak Wadhwa - SEBI Registered Advisor</title>
 
-<!-- Speed Optimization: Resource Hints (Preconnect & DNS Prefetch) -->
+<!-- Resource Hints for Lightning Fast Connection -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://connect.facebook.net">
-<link rel="dns-prefetch" href="https://connect.facebook.net">
 
-<!-- Premium Fonts with display=swap for fast rendering -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Fast CSS Font Loading with Swap -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
+/* Minified Critical CSS */
+*,::after,::before{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;overflow-x:hidden}
 body{
-    font-family:'Montserrat',sans-serif;
+    font-family:'Montserrat',-apple-system,BlinkMacSystemFont,sans-serif;
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:60px 15px 30px;
-    overflow-x:hidden;
+    padding:50px 12px 20px;
     background-color:#050505;
-    background-image: 
-        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-        linear-gradient(180deg, #050505 0%, #121212 100%);
+    background-image:radial-gradient(circle at 50% 0%,rgba(212,175,55,.15) 0%,transparent 50%),linear-gradient(180deg,#050505 0%,#121212 100%);
 }
-
 body::before{
     content:"";
     position:fixed;
-    top:0; left:0; width:100%; height:100%;
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    top:0;left:0;width:100%;height:100%;
+    background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
     background-size:40px 40px;
     z-index:-1;
     pointer-events:none;
 }
-
 .top-bar{
     position:fixed;
-    top:0; left:0; width:100%;
+    top:0;left:0;width:100%;
     text-align:center;
     background:#0f0f0f;
-    border-bottom:1px solid rgba(212, 175, 55, 0.3);
+    border-bottom:1px solid rgba(212,175,55,.3);
     color:#D4AF37;
-    padding:12px;
-    font-size:13px;
+    padding:10px 8px;
+    font-size:12px;
     font-weight:600;
-    letter-spacing:1px;
+    letter-spacing:.5px;
     z-index:999;
     text-transform:uppercase;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
-
 .container{
     width:100%;
-    max-width:440px;
-    position:relative;
+    max-width:420px;
     text-align:center;
     color:#F5F5F5;
-    padding:40px 30px;
-    background:linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    padding:30px 20px;
+    background:linear-gradient(145deg,#1a1a1a,#0d0d0d);
     border-radius:16px;
-    border:1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 
-        0 20px 50px rgba(0,0,0,0.8), 
-        inset 0 1px 0 rgba(255,255,255,0.05);
-    animation:cardEntry 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform, opacity;
+    border:1px solid rgba(212,175,55,.2);
+    box-shadow:0 15px 35px rgba(0,0,0,.8);
+    contain:content;
 }
-
-@keyframes cardEntry{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-.profile-wrap{
-    display:flex;
-    justify-content:center;
-    margin-bottom:20px;
-    position:relative;
-}
-
+.profile-wrap{display:flex;justify-content:center;margin-bottom:15px;position:relative}
 .profile-ring{
-    padding:4px;
+    padding:3px;
     border-radius:50%;
-    background:linear-gradient(135deg, #D4AF37, #f8e9a1, #D4AF37);
-    box-shadow:0 0 20px rgba(212, 175, 55, 0.4);
+    background:linear-gradient(135deg,#D4AF37,#f8e9a1,#D4AF37);
+    box-shadow:0 0 15px rgba(212,175,55,.3);
     position:relative;
+    width:126px;height:126px;
 }
-
 .profile{
-    width:130px;
-    height:130px;
+    width:120px;height:120px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid #121212;
+    border:2px solid #121212;
     display:block;
 }
-
 .live-badge{
     position:absolute;
-    bottom:5px;
-    right:10px;
+    bottom:2px;right:4px;
     background:#dc2626;
-    color:white;
-    font-size:11px;
+    color:#fff;
+    font-size:10px;
     font-weight:700;
-    padding:4px 8px;
+    padding:3px 7px;
     border-radius:20px;
-    z-index:10;
     border:2px solid #121212;
-    display:flex;
-    align-items:center;
-    gap:4px;
-    text-transform:uppercase;
+    display:flex;align-items:center;gap:4px;
 }
-
 .live-dot{
-    width:6px; height:6px;
-    background:white;
+    width:5px;height:5px;
+    background:#fff;
     border-radius:50%;
     animation:blink 1.5s infinite;
 }
-@keyframes blink{ 0%, 100% {opacity:1;} 50% {opacity:0.3;} }
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 .name{
-    font-family:'Playfair Display',serif;
-    font-size:28px;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:26px;
     font-weight:700;
-    color:#ffffff;
-    margin-bottom:8px;
-    letter-spacing:0.5px;
+    color:#fff;
+    margin-bottom:6px;
 }
-
 .sebi-tag{
     display:inline-block;
     color:#D4AF37;
-    font-size:11px;
+    font-size:10px;
     font-weight:600;
-    padding:5px 12px;
-    border:1px solid rgba(212, 175, 55, 0.5);
+    padding:4px 10px;
+    border:1px solid rgba(212,175,55,.5);
     border-radius:4px;
-    margin-bottom:25px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    background: rgba(212, 175, 55, 0.05);
+    margin-bottom:20px;
+    letter-spacing:.5px;
+    background:rgba(212,175,55,.05);
 }
-
 .main-heading{
-    color:#AAAAAA;
-    font-size:14px;
-    font-weight:400;
-    line-height:1.6;
-    margin-bottom:25px;
-    max-width:320px;
-    margin-left:auto;
-    margin-right:auto;
+    color:#AAA;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:20px;
 }
-.main-heading b{ color:#fff; font-weight:600; }
+.main-heading b{color:#fff}
 
 .stats{
     display:flex;
     justify-content:space-between;
-    margin:0 auto 30px auto;
-    padding:15px 0;
-    border-top:1px solid rgba(255,255,255,0.1);
-    border-bottom:1px solid rgba(255,255,255,0.1);
+    margin:0 auto 20px auto;
+    padding:12px 0;
+    border-top:1px solid rgba(255,255,255,.1);
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
-.stat-item{ width:32%; }
-.stat-item:not(:last-child){ border-right:1px solid rgba(255,255,255,0.1); }
+.stat-item{width:33%}
+.stat-item:not(:last-child){border-right:1px solid rgba(255,255,255,.1)}
 .stat-item strong{
     display:block;
     color:#D4AF37;
-    font-size:22px;
+    font-size:20px;
     font-weight:700;
     font-family:'Playfair Display',serif;
 }
-.stat-item span{
-    color:#888;
-    font-size:11px;
-    font-weight:500;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-}
+.stat-item span{color:#888;font-size:10px;text-transform:uppercase}
 
 .telegram-btn{
     position:relative;
-    overflow:hidden;
     display:block;
     width:100%;
     text-decoration:none;
-    padding:16px;
+    padding:14px;
     border-radius:8px;
-    font-family:'Montserrat',sans-serif;
-    font-size:15px;
+    font-size:14px;
     font-weight:700;
-    color:#000000;
-    background:linear-gradient(135deg, #D4AF37, #F8E9A1, #D4AF37);
-    box-shadow:0 10px 30px rgba(212, 175, 55, 0.3);
-    transition:transform 0.2s ease, box-shadow 0.2s ease;
-    letter-spacing:0.5px;
+    color:#000;
+    background:linear-gradient(135deg,#D4AF37,#F8E9A1,#D4AF37);
     text-transform:uppercase;
-    animation:goldPulse 2.5s infinite;
-    cursor: pointer;
+    letter-spacing:.5px;
+    box-shadow:0 6px 20px rgba(212,175,55,.3);
+    will-change:transform;
 }
-
-.telegram-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 40px rgba(212, 175, 55, 0.5);
-}
-
-.telegram-btn::before{
-    content:"";
-    position:absolute;
-    top:0; left:-100%;
-    width:100%; height:100%;
-    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-    animation:shine 3s infinite;
-}
-
-@keyframes goldPulse{
-    0%{box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5), 0 10px 30px rgba(212, 175, 55, 0.3);}
-    70%{box-shadow: 0 0 0 12px rgba(212, 175, 55, 0), 0 10px 30px rgba(212, 175, 55, 0.3);}
-    100%{box-shadow: 0 0 0 0 rgba(212, 175, 55, 0), 0 10px 30px rgba(212, 175, 55, 0.3);}
-}
-
-@keyframes shine{ 100%{left:120%;} }
-
-.cta-subtext{
-    margin-top:12px;
-    color:#D4AF37;
-    font-size:12px;
-    font-weight:500;
-}
-
-.footer{
-    margin-top:30px;
-    color:#555;
-    font-size:10px;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-}
+.cta-subtext{margin-top:10px;color:#D4AF37;font-size:11px;font-weight:500}
+.footer{margin-top:20px;color:#555;font-size:10px;letter-spacing:.5px}
 </style>
 
-<!-- Meta Pixel Code Optimized -->
+<!-- Non-blocking Analytics Pixel Loading -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1701844171054333'); 
-fbq('track', 'PageView');
+window.addEventListener('DOMContentLoaded', function() {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1701844171054333');
+    fbq('track', 'PageView');
+});
 
 function trackTelegramClick() {
     if (typeof fbq !== 'undefined') {
@@ -273,23 +182,18 @@ function trackTelegramClick() {
     }
 }
 </script>
-<noscript>
- <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1701844171054333&ev=PageView&noscript=1"/>
-</noscript>
 </head>
 <body>
 
 <div class="top-bar">
-    📈 Market Live: Get Real-Time Nifty & BankNifty Calls on Telegram
+    📈 Market Live: Real-Time Nifty & BankNifty Calls
 </div>
 
 <div class="container">
 
     <div class="profile-wrap">
         <div class="profile-ring">
-            <!-- Image Optimization: High Priority & Explicit Width/Height to avoid layout shift -->
-            <img src="Deepak.jpg" class="profile" alt="Deepak Wadhwa" width="130" height="130" fetchpriority="high">
+            <img src="Deepak.jpg" class="profile" alt="Deepak Wadhwa" width="120" height="120" fetchpriority="high" loading="eager">
             <div class="live-badge"><div class="live-dot"></div> LIVE</div>
         </div>
     </div>
@@ -299,7 +203,7 @@ src="https://www.facebook.com/tr?id=1701844171054333&ev=PageView&noscript=1"/>
 
     <div class="main-heading">
         Expert in <b>BankNifty, Nifty, Stock Options</b> & Midcap.<br>
-        Calls with proper Technical Analysis directly from a SEBI RA.
+        Direct calls with Technical Analysis from SEBI RA.
     </div>
 
     <div class="stats">
@@ -317,12 +221,12 @@ src="https://www.facebook.com/tr?id=1701844171054333&ev=PageView&noscript=1"/>
         </div>
     </div>
 
-    <a href="https://t.me/+WUQcEoCfZLFkZDU1" onclick="trackTelegramClick()" target="_blank" class="telegram-btn">
+    <a href="https://t.me/+WUQcEoCfZLFkZDU1" onclick="trackTelegramClick()" target="_blank" rel="noopener" class="telegram-btn">
         Join Premium Telegram
     </a>
     
     <div class="cta-subtext">
-        ⚡ Instant Access • Limited Free Slots Available
+        ⚡ Instant Access • Limited Free Slots
     </div>
 
     <div class="footer">
